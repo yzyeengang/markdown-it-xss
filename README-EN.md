@@ -12,7 +12,13 @@ npm install -S markdown-it-xss
 #### BASE
 ```javascript
 const md = require('markdown-it')({ html: true })
-            .use(require('markdown-it-xss'));
+            .use(require('markdown-it-xss'),{
+                 xss:{
+                         escapeHtml(html) {
+                               return html
+                         },
+                 }
+            });
 
 md.render(`<img onerror="alert('xss')" src="1">`); // => '<img>'
 ```

@@ -1,6 +1,6 @@
 {
   "name": "markdown-it-xss",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A markdown-it plugin to make your render content more secure ",
   "main": "index.js",
   "scripts": {
